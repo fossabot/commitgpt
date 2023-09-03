@@ -20,6 +20,7 @@ class GPT:
         self.max_tokens = 256
         self.n = 1
         self.stop = None
+        self.max_gpt_tokens = 2048
 
     def api_key(self, api_key: str) -> None:
         """api_key sets the openai api key.
@@ -50,6 +51,9 @@ class GPT:
         prompt = COMMIT_PROMPT.replace(
             "{git_diff}", git_dif).replace(
             "{commit_guidelines}", guidelines)
+
+        if len(prompt) > self.max_gpt_tokens:
+            prompt = prompt[:self.max_gpt_tokens - 100]
 
         reponse = openai.ChatCompletion.create(
             model=self.model,
