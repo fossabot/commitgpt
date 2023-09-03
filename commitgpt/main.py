@@ -1,9 +1,9 @@
 import typer
 from rich import print
-from commitgpt.gitop import Git
-from commitgpt.gpt import GPT
+from .gitop import Git
+from .gpt import GPT
 import configparser
-from commitgpt.prompts import (
+from src.prompts import (
     TIM_COMMIT_GUIDELINE,
     ROLE,
 )

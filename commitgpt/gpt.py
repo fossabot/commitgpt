@@ -1,5 +1,5 @@
 import openai
-from commitgpt.prompts import COMMIT_PROMPT
+from .prompts import COMMIT_PROMPT
 from typing import Optional
 
 
