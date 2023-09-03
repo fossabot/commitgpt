@@ -3,7 +3,7 @@ from rich import print
 from .gitop import Git
 from .gpt import GPT
 import configparser
-from src.prompts import (
+from .prompts import (
     TIM_COMMIT_GUIDELINE,
     ROLE,
 )
