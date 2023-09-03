@@ -23,6 +23,8 @@ pip install commitgpt
 
 ## Usage
 
+[![asciicast](https://asciinema.org/a/606115.svg)](https://asciinema.org/a/606115)
+
 ```bash
 commitgpt setup
 ```
