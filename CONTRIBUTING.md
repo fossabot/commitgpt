@@ -2,7 +2,7 @@
 
 ## Before contributing
 
-Welcome to commitgpt! Before sending your pull requests, make sure that you **read the whole guidelines**. If you have any doubt on the contributing guide, please feel free to [state it clearly in an issue](https://github.com/0x6flab/gptcommit/issues/new).
+Welcome to commitgpt! Before sending your pull requests, make sure that you **read the whole guidelines**. If you have any doubt on the contributing guide, please feel free to [state it clearly in an issue](https://github.com/0x6flab/commitgpt/issues/new).
 
 ## Contributing
 
@@ -19,9 +19,9 @@ We are very happy that you are considering contributing to this project! Being o
 
 We appreciate any contribution, from fixing a grammar mistake in a comment to implementing complex algorithms. Please read this section if you are contributing your work.
 
-Your contribution will be tested by our [automated testing on GitHub Actions](https://github.com/0x6flab/gptcommit/actions) to save time and mental energy. After you have submitted your pull request, you should see the GitHub Actions tests start to run at the bottom of your submission page. If those tests fail, then click on the **_details_** button try to read through the GitHub Actions output to understand the failure. If you do not understand, please leave a comment on your submission page.
+Your contribution will be tested by our [automated testing on GitHub Actions](https://github.com/0x6flab/commitgpt/actions) to save time and mental energy. After you have submitted your pull request, you should see the GitHub Actions tests start to run at the bottom of your submission page. If those tests fail, then click on the **_details_** button try to read through the GitHub Actions output to understand the failure. If you do not understand, please leave a comment on your submission page.
 
-If you are interested in resolving an [open issue](https://github.com/0x6flab/gptcommit/issues), simply make a pull request with your proposed fix. **We do not assign issues in this repo** so please do not ask for permission to work on an issue.
+If you are interested in resolving an [open issue](https://github.com/0x6flab/commitgpt/issues), simply make a pull request with your proposed fix. **We do not assign issues in this repo** so please do not ask for permission to work on an issue.
 
 Please help us keep our issue list small by adding `Fixes #{$ISSUE_NUMBER}` to the description of pull requests that resolve open issues.
 For example, if your pull request fixes issue #10, then please add the following to its description:
