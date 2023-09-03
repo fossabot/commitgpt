@@ -21,7 +21,7 @@ APP_DIR = typer.get_app_dir(APP_NAME)
 CONFIG_PATH: Path = Path(APP_DIR) / "config.cfg"
 
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 app = typer.Typer(
     name=APP_NAME,

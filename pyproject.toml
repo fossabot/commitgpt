@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "commitgpt"
-version = "0.1.0"
+version = "0.2.0"
 description = "commitgpt assists developers in generating high-quality commit messages for their version control systems, such as git."
 authors = ["Rodney Osodo <socials@rodneyosodo.com>"]
 license = "LICENSE"
