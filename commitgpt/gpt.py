@@ -31,9 +31,12 @@ class GPT:
             None
         """
         openai.api_key = api_key
-    
-    def generate_message(self, git_dif: str, role: str, guidelines: str) -> str:
-        """generate_message generates a commit message based on the provided Git diff.
+
+    def generate_message(
+        self, git_dif: str, role: str, guidelines: str
+    ) -> str:
+        """generate_message generates a commit message
+        based on the provided Git diff.
 
         Args:
             git_dif (str): git diff

@@ -30,12 +30,13 @@ class Git:
 
         Args:
             commit_id (str): commit id
-            after_add (bool, optional): changes after git add. Defaults to True.
+            after_add (bool, optional): changes after git add.
+            Defaults to True.
 
         Returns:
             str: diff
         """
-        
+
         if after_add:
             return self.git.diff(commit_id, "--cached")
         else:
