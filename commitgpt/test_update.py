@@ -38,13 +38,15 @@ def test_update():
         mock_os_system.assert_called()
 
 def test_check_and_update_with_new_version(mock_feedparser):
+    curr_version = version
+    new_version = str(1) + version
     mock_feedparser.return_value = {
         "entries": [
-            {"title": "commitgpt 1.0.0"},
-            {"title": "commitgpt 1.1.0"},
+            {"title": f"{curr_version}"},
+            {"title": f"{new_version}"},
         ]
     }
-    with patch("typer.confirm") as mock_confirm, patch("os.system") as mock_os_system:
+    with patch("typer.confirm") as mock_confirm, patch("os.system") as mock_os_system: # noqa: E501
         mock_confirm.return_value = True
         check_and_update()
         mock_os_system.assert_called()
@@ -55,7 +57,7 @@ def test_check_and_update_with_no_new_version(mock_feedparser):
             {"title": f"{version}"},
         ]
     }
-    with patch("typer.confirm") as mock_confirm, patch("os.system") as mock_os_system:
+    with patch("typer.confirm") as mock_confirm, patch("os.system") as mock_os_system:  # noqa: E501
         mock_confirm.return_value = True
         check_and_update()
         mock_os_system.assert_not_called()
@@ -70,7 +72,7 @@ def test_check_and_update_user_declines_update(mock_feedparser):
         ]
     }
 
-    with patch("typer.confirm") as mock_confirm, patch("os.system") as mock_os_system:
+    with patch("typer.confirm") as mock_confirm, patch("os.system") as mock_os_system: # noqa: E501
         mock_confirm.return_value = False
         check_and_update()
         mock_os_system.assert_not_called()
