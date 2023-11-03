@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4.1.1
 
       - name: Set up Python 3.11
-        uses: actions/setup-python@v4.7.0
+        uses: actions/setup-python@v4.7.1
         with:
           python-version: "3.11"
 
@@ -35,8 +35,12 @@ jobs:
           poetry check --no-interaction
           poetry config virtualenvs.in-project true
           poetry install --no-interaction
+          pip3 install --upgrade coveralls
 
       - name: Run tests
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
         run: |
           git config --global user.email "28790446+rodneyosodo@users.noreply.github.com"
           git config --global user.name "Rodney Osodo"
