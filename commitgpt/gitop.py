@@ -68,14 +68,14 @@ class Git:
         try:
             diff = self.git.diff(last_commit_id, "--cached")
         except Exception as e:
-            print("[bold red]No changes found with error {e}[/bold red] :scream:", e)
+            print("[bold red]No changes found with error {e}[/bold red] :scream:", e)  # noqa: E501
             exit(1)
 
         if diff == "":
             try:
                 diff = self.git.diff(last_commit_id)
             except Exception as e:
-                print("[bold red]No changes found with error {e}[/bold red] :scream:", e)
+                print("[bold red]No changes found with error {e}[/bold red] :scream:", e)  # noqa: E501
                 exit(1)
 
         return diff
