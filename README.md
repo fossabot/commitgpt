@@ -1,5 +1,9 @@
 # commitgpt
 
+[![Coverage Status](https://coveralls.io/repos/github/0x6flab/commitgpt/badge.svg?branch=tests)](https://coveralls.io/github/0x6flab/commitgpt?branch=tests)
+[![Continuous Integration](https://github.com/0x6flab/commitgpt/actions/workflows/ci.yaml/badge.svg)](https://github.com/0x6flab/commitgpt/actions/workflows/ci.yaml)
+[![Continuous Deployment](https://github.com/0x6flab/commitgpt/actions/workflows/cd.yaml/badge.svg)](https://github.com/0x6flab/commitgpt/actions/workflows/cd.yaml)
+
 commitgpt assists developers in generating high-quality commit messages for their version control systems, such as git.
 
 ## Features
