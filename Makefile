@@ -4,7 +4,7 @@ lint:
 
 .PHONY: test
 test:
-	poetry run pytest -v
+	poetry run coverage run --source=commitgpt -m pytest commitgpt/
 
 .PHONY: install-precommit
 install-precommit:
