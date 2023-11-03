@@ -20,5 +20,4 @@ update-precommit:
 
 release:
 	standard-version
-	goreleaser release --clean --release-notes CHANGELOG.md
 	git push --follow-tags origin main
