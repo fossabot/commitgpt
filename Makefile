@@ -23,5 +23,6 @@ update-precommit:
 	pre-commit autoupdate
 
 release:
+	# Don't forget to update the version in pyproject.toml
 	standard-version
 	git push --follow-tags origin main
