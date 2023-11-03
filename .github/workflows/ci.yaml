@@ -57,7 +57,8 @@ jobs:
 
       - name: Run tests
         run: |
-          poetry run pytest -v
+          poetry run coverage run --source=commitgpt -m pytest commitgpt/
+          coveralls
 
       - name: Build artifacts
         run: |
