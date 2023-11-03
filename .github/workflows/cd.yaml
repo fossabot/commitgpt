@@ -41,7 +41,7 @@ jobs:
           git config --global user.email "28790446+rodneyosodo@users.noreply.github.com"
           git config --global user.name "Rodney Osodo"
           poetry run coverage run --source=commitgpt -m pytest commitgpt/
-          coveralls
+          coveralls --service=github
 
       - name: Add version to environment
         run: |

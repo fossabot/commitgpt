@@ -35,4 +35,4 @@ src = ["commitgpt"]
 convention = "google"
 
 [tool.pytest]
-filterwarnings = "ignore:.*U.*mode is deprecated:DeprecationWarning"
+filterwarnings = "ignore:.* is deprecated:DeprecationWarning"

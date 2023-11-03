@@ -21,8 +21,8 @@ jobs:
 
       - uses: pre-commit/action@v3.0.0
 
-  python-check-across-platforms:
-    name: Python Check
+  python-build-across-platforms:
+    name: Cross-platform Python Build
     needs: pre-commit-check
     strategy:
       fail-fast: false
@@ -55,12 +55,46 @@ jobs:
           poetry config virtualenvs.in-project true
           poetry install --no-interaction
 
+      - name: Build artifacts
+        run: |
+          poetry build --no-interaction
+
+  testing:
+    name: Python Check
+    needs: python-build-across-platforms
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.6.0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4.7.0
+        with:
+          python-version: 3.11
+
+      - id: cache-dependencies
+        name: Cache dependencies
+        uses: actions/cache@v3.3.1
+        with:
+          path: ${{ github.workspace }}/.venv
+          key: ${{ matrix.os }}-${{ hashFiles('**/poetry.lock') }}
+          restore-keys: ${{ matrix.os }}-
+
+      - name: Install dependencies
+        if: steps.cache-dependencies.cache-hit != 'true'
+        run: |
+          python -m pip install -U pip poetry
+          poetry check --no-interaction
+          poetry config virtualenvs.in-project true
+          poetry install --no-interaction
+          pip3 install --upgrade coveralls
+
       - name: Run tests
         run: |
           git config --global user.email "28790446+rodneyosodo@users.noreply.github.com"
           git config --global user.name "Rodney Osodo"
           poetry run coverage run --source=commitgpt -m pytest commitgpt/
-          coveralls
+          coveralls --service=github
 
       - name: Build artifacts
         run: |
