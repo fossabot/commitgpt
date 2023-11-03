@@ -1,31 +1,24 @@
 # Security Policy
 
-## Supported Versions
-
-We are committed to ensuring the security of commitgpt and its users. Below is a list of supported versions and their security update status:
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 0.1.x   | :white_check_mark: |
-
-We highly recommend keeping your installation up-to-date by regularly upgrading to the latest supported version to benefit from the latest security enhancements and bug fixes.
+🛡️ Found a security issue in a [commitgpt](https://github.com/0x6flab/commitgpt) project? Read on.
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in commitgpt, we encourage you to report it to us promptly. Your cooperation helps us maintain the security of our software and protect our users.
+Our project maintainers will make every effort to respond to and confirm your reports within 24 hours. However, if you believe your report poses a critical threat to user safety and security, please make that clear in the subject.
 
-To report a vulnerability, please follow these steps:
+When reporting an issue, please include the following details, if possible:
 
-Contact us: Create an issue in this repository. Please include a clear and concise description, steps to reproduce, and any supporting evidence.
+- The project version and commit where you identified the issue
+- A proof of concept (in plaintext, no binaries)
+- Detailed steps to reproduce the issue
+- Any recommendations you may have for resolving the issue.
 
-Response Time: We will acknowledge your report within 8 hours of receipt and work diligently to assess the reported vulnerability.
+### Report using GitHub issues
 
-Investigation: Our team will investigate the reported vulnerability to confirm its validity and impact.
+To report a security vulnerability through GitHub issues, follow these steps:
 
-Resolution: If the vulnerability is accepted, we will work on resolving it as quickly as possible and will release a security patch.
+1. Navigate to the Issues tab at the top of this repository.
+2. Click the New issue button.
+3. Fill out the issue form with the necessary information.
 
-Communication: We will maintain regular communication with you to keep you informed of the progress and expected resolution timeline.
-
-Disclosure: Once the vulnerability is resolved and a patch is available, we will coordinate with you to establish an appropriate disclosure timeline to ensure that our users have adequate time to update their installations.
-
-We take security seriously, and your contribution to our project's security is highly valued. Thank you for helping us make commitgpt a more secure tool for developers.
+Your assistance in helping us maintain a secure environment for our users is greatly appreciated. Thank you for your responsible disclosure.
