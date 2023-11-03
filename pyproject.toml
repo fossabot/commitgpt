@@ -19,6 +19,7 @@ langchain = "^0.0.329"
 unstructured = "^0.10.28"
 tiktoken = "^0.5.1"
 feedparser = "^6.0.10"
+coveralls = "^3.3.1"
 
 
 [build-system]
