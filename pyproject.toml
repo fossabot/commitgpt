@@ -33,3 +33,6 @@ src = ["commitgpt"]
 
 [tool.ruff.pydocstyle]
 convention = "google"
+
+[tool.pytest]
+filterwarnings = "ignore:.*U.*mode is deprecated:DeprecationWarning"
