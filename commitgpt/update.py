@@ -56,12 +56,12 @@ def check_and_update() -> None:
     """
     if check_update():
         print("[bold green]New version of commitgpt available[/bold green]")
-        update = typer.confirm(
+        ok = typer.confirm(
             text="Do you want to update?",
             default=True,
             show_default=True,
         )
-        if update:
+        if ok:
             update()
             print("[bold green]Updated commitgpt![/bold green]")
             return None
