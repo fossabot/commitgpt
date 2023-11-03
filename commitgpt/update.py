@@ -5,7 +5,7 @@ import sys
 import os
 from rich import print
 import typer
-
+from packaging import parse
 RELEASE_FEED_URL = "https://pypi.org/rss/project/commitgpt/releases.xml"
 INSTALL_COMMAND = "pip install --break-system-packages --upgrade commitgpt"
 
@@ -23,14 +23,14 @@ def check_update() -> bool:
     """
     feed = feedparser.parse(RELEASE_FEED_URL)
     releases = []
-    if len(feed["entries"]) == 0:
+    if len(feed.get("entries")) == 0:
         return False
     for entry in feed["entries"]:
-        if entry["title"] != "":
+        if entry.get("title"):
             releases.append(entry["title"])
     if len(releases) == 0:
         return False
-    latest_release = max(releases)
+    latest_release = max(releases, key=parse)
 
     return latest_release != __VERSION__
 
