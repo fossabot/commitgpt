@@ -25,20 +25,6 @@ def test_diff(git_instance):
     diff = git_instance.diff()
     assert isinstance(diff, str)
 
-def test_inside_git_dir():
-    # repo = Repo(os.getcwd())
-    # parent_git = repo.git
-    # os.makedirs("test_dir")
-    print(os.getcwd())
-    # os.chdir("test_dir")
-    # git = Git()
-    # with open("test.txt", "w") as f:
-    #     f.write("Test commit with signoff\n")
-    # parent_git.add("test.txt")
-    # diff = git.diff()
-    # assert diff != ""
-    # teardown_git()
-
 
 def test_commit_with_signoff(git_instance):
     setup_git()
@@ -74,7 +60,6 @@ def test_commit_without_git_add_2(git_instance):
     assert diff == ""
 
 def test_init_with_valid_repo():
-    # Assuming this test is run in a valid Git repository
     git = Git()
     assert git is not None
 
@@ -84,6 +69,5 @@ def test_init_with_invalid_repo(tmpdir):
     with pytest.raises(SystemExit):
         _ = Git()
 
-# Run tests using pytest
 if __name__ == "__main__":
     pytest.main()

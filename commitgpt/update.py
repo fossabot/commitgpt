@@ -23,8 +23,13 @@ def check_update() -> bool:
     """
     feed = feedparser.parse(RELEASE_FEED_URL)
     releases = []
+    if len(feed["entries"]) == 0:
+        return False
     for entry in feed["entries"]:
-        releases.append(entry["title"])
+        if entry["title"] != "":
+            releases.append(entry["title"])
+    if len(releases) == 0:
+        return False
     latest_release = max(releases)
 
     return latest_release != __VERSION__
