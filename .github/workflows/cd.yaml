@@ -35,17 +35,18 @@ jobs:
           poetry check --no-interaction
           poetry config virtualenvs.in-project true
           poetry install --no-interaction
-          pip3 install --upgrade coveralls
 
       - name: Run tests
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
         run: |
           git config --global user.email "28790446+rodneyosodo@users.noreply.github.com"
           git config --global user.name "Rodney Osodo"
           poetry run coverage run --source=commitgpt -m pytest commitgpt/
-          coveralls --service=github
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
 
       - name: Add version to environment
         run: |
