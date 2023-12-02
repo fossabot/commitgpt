@@ -35,7 +35,6 @@ jobs:
           poetry check --no-interaction
           poetry config virtualenvs.in-project true
           poetry install --no-interaction
-          pip3 install --upgrade coveralls
 
       - name: Run tests
         run: |
