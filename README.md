@@ -3,6 +3,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/0x6flab/commitgpt/badge.svg?branch=tests)](https://coveralls.io/github/0x6flab/commitgpt?branch=tests)
 [![Continuous Integration](https://github.com/0x6flab/commitgpt/actions/workflows/ci.yaml/badge.svg)](https://github.com/0x6flab/commitgpt/actions/workflows/ci.yaml)
 [![Continuous Deployment](https://github.com/0x6flab/commitgpt/actions/workflows/cd.yaml/badge.svg)](https://github.com/0x6flab/commitgpt/actions/workflows/cd.yaml)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2F0x6flab%2Fcommitgpt.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2F0x6flab%2Fcommitgpt?ref=badge_shield)
 
 commitgpt assists developers in generating high-quality commit messages for their version control systems, such as git.
 
@@ -48,3 +49,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
 ## License
 
 [GNU GENERAL PUBLIC LICENSE](LICENSE)
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2F0x6flab%2Fcommitgpt.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2F0x6flab%2Fcommitgpt?ref=badge_large)
